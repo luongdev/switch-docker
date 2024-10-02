@@ -1,0 +1,50 @@
+<profile name="external">
+  <gateways>
+    <X-PRE-PROCESS cmd="include" data="gateways/*.xml" />
+  </gateways>
+
+  <aliases></aliases>
+
+  <domains>
+    <domain name="all" alias="false" parse="true" />
+  </domains>
+
+  <settings>
+    <param name="debug" value="0" />
+    <param name="user-agent-string" value="sofia" />
+    <param name="sip-trace" value="no" />
+    <param name="sip-capture" value="no" />
+    <param name="rfc2833-pt" value="101" />
+    <param name="sip-port" value="$${external_sip_port}" />
+    <param name="dialplan" value="XML" />
+    <param name="track-calls" value="false" />
+    <param name="context" value="public" />
+    <param name="dtmf-type" value="rfc2833" />
+    <param name="dtmf-duration" value="2000" />
+    <param name="disable-register" value="true" />
+    <param name="inbound-codec-prefs" value="PCMU,PCMA" />
+    <param name="outbound-codec-prefs" value="PCMU,PCMA" />
+    <param name="zrtp-passthru" value="true" />
+    <param name="rtp-timer-name" value="soft" />
+    <param name="manage-presence" value="false" />
+    <!-- <param name="local-network-acl" value="localnet.auto" /> -->
+    <!-- <param name="apply-nat-acl" value="nat.auto" /> -->
+    <!-- <param name="apply-register-acl" value="domains" /> -->
+    <param name="apply-inbound-acl" value="domains" />
+    <param name="suppress-cng" value="true" />
+    <param name="inbound-codec-negotiation" value="generous" />
+    <param name="sip-options-respond-503-on-busy" value="true" />
+    <param name="parse-all-header-invites" value="false" />
+    <param name="nonce-ttl" value="60" />
+    <param name="auth-calls" value="true" />
+    <param name="auth-subscriptions" value="true" />
+    <param name="extension-in-contact" value="true" />
+    <param name="ext-rtp-ip" value="$${external_ip_addr}" />
+    <param name="ext-sip-ip" value="$${external_ip_addr}" />
+    <param name="media_timeout" value="300" />
+    <param name="media_hold_timeout" value="1800" />
+    <param name="tls" value="false" />
+    <param name="disable-register" value="true" />
+    <!-- <param name="odbc-dsn" value="$${dsn}" /> -->
+  </settings>
+</profile>

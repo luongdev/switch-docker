@@ -1,0 +1,62 @@
+<!-- Codecs -->
+<X-PRE-PROCESS cmd="set" data="global_codec_prefs=PCMU,PCMA" />
+<X-PRE-PROCESS cmd="set" data="outbound_codec_prefs=PCMU,PCMA" />
+<X-PRE-PROCESS cmd="set" data="media_mix_inbound_outbound_codecs=true" />
+
+<!-- Defaults -->
+<X-PRE-PROCESS cmd="set" data="call_debug=false" />
+<X-PRE-PROCESS cmd="set" data="console_loglevel=info" />
+<X-PRE-PROCESS cmd="set" data="default_areacode=208" />
+<X-PRE-PROCESS cmd="set" data="sit=%(274,0,913.8);%(274,0,1370.6);%(380,0,1776.7)" />
+<X-PRE-PROCESS cmd="set" data="use_profile=internal" />
+<X-PRE-PROCESS cmd="set" data="default_language=en" />
+<X-PRE-PROCESS cmd="set" data="default_dialect=us" />
+<X-PRE-PROCESS cmd="set" data="default_voice=callie" />
+<X-PRE-PROCESS cmd="set" data="ajax_refresh_rate=3000" />
+<X-PRE-PROCESS cmd="set" data="ringback=$${us-ring}" />
+<X-PRE-PROCESS cmd="set" data="transfer_ringback=$${us-ring}" />
+<X-PRE-PROCESS cmd="set" data="sleep=0" />
+<X-PRE-PROCESS cmd="set" data="record_ext=wav" />
+<X-PRE-PROCESS cmd="set" data="default_country=US" />
+<X-PRE-PROCESS cmd="set" data="default_countrycode=1" />
+<X-PRE-PROCESS cmd="set" data="default_exitcode=011" />
+
+<!-- IP Address -->
+<X-PRE-PROCESS cmd="set" data="external_sip_ip=$${external_ip_v4}" />
+<X-PRE-PROCESS cmd="set" data="external_rtp_ip=$${external_ip_v4}" />
+
+<!-- Music on Hold -->
+<X-PRE-PROCESS cmd="set" data="hold_music=local_stream://default" />
+
+<!-- Ringtones -->
+<X-PRE-PROCESS cmd="set" data="us-ring=%(2000,4000,440,480)" />
+<X-PRE-PROCESS cmd="set" data="bong-ring=v" />
+
+<!-- SIP -->
+<X-PRE-PROCESS cmd="set" data="unroll_loops=true" />
+<X-PRE-PROCESS cmd="set" data="sip_tls_version=tlsv1,tlsv1.1,tlsv1.2" />
+
+<!-- SIP Profile: External -->
+<X-PRE-PROCESS cmd="set" data="external_ssl_dir=$${tls_dir}" />
+<X-PRE-PROCESS cmd="set" data="external_ssl_enable=false" />
+<X-PRE-PROCESS cmd="set" data="external_tls_port=5081" />
+<X-PRE-PROCESS cmd="set" data="external_sip_port=5080" />
+
+<!-- SIP Profile: Internal -->
+<X-PRE-PROCESS cmd="set" data="internal_tls_port=5091" />
+<X-PRE-PROCESS cmd="set" data="internal_ssl_dir=$${tls_dir}" />
+<X-PRE-PROCESS cmd="set" data="internal_sip_port=5090" />
+<X-PRE-PROCESS cmd="set" data="internal_ssl_enable=false" />
+
+<!-- Sound -->
+<X-PRE-PROCESS cmd="set" data="sound_prefix=$${sounds_dir}/en/us/callie" />
+
+<!-- Tones -->
+<X-PRE-PROCESS cmd="set" data="vacant-us-tone=%(274,0,913.8);%(274,0,1370.6);%(380,0,1776.7)" />
+<X-PRE-PROCESS cmd="set" data="bong-us-tone=v" />
+<X-PRE-PROCESS cmd="set" data="busy-us-tone=%(500,500,480,620)" />
+
+<!-- XMPP -->
+<X-PRE-PROCESS cmd="set" data="bind_server_ip=auto" />
+<X-PRE-PROCESS cmd="set" data="xmpp_client_profile=xmppc" />
+<X-PRE-PROCESS cmd="set" data="xmpp_server_profile=xmpps" />

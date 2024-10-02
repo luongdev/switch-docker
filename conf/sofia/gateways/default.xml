@@ -1,0 +1,15 @@
+<include>
+  <gateway name="default">
+    <param name="auth-username" value="switch" />
+    <param name="proxy" value="127.0.0.1:5080" />
+    <param name="expire-seconds" value="600" />
+    <param name="register" value="false" />
+    <!-- <param name="register-transport" value="udp"/> -->
+    <!-- <param name="retry-seconds" value="30"/> -->
+    <param name="context" value="public" />
+    <param name="caller-id-in-from" value="true" />
+    <param name="extension-in-contact" value="true" />
+    <param name="ping" value="30" />
+    <param name="cid-type" value="rpid" />
+  </gateway>
+</include>

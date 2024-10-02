@@ -1,0 +1,30 @@
+<configuration name="logfile.conf" description="File Logging">
+  <settings>
+    <param name="rotate-on-hup" value="true" />
+  </settings>
+  <profiles>
+    <!-- 
+    <profile name="file">
+      <settings>
+        <param name="logfile" value="/var/log/switch/switch.log" />
+        <param name="rollover" value="104857600" />
+        <param name="maximum-rotate" value="50" />
+        <param name="uuid" value="true" />
+      </settings>
+      <mappings>
+        <map name="all" value="debug,info,notice,warning,err,crit,alert" />
+      </mappings>
+    </profile> 
+    -->
+    <profile name="stdout">
+      <settings>
+        <param name="logfile" value="/dev/stdout" />
+        <param name="rollover" value="0" />
+        <param name="uuid" value="true" />
+      </settings>
+      <mappings>
+        <map name="all" value="debug,info,notice,warning,err,crit,alert" />
+      </mappings>
+    </profile>
+  </profiles>
+</configuration>
