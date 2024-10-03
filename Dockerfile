@@ -4,8 +4,6 @@ COPY bin /tmp/bin
 COPY conf /tmp/conf
 COPY template /tmp/template
 
-RUN apt update && apt install -y gosu
-
 RUN mv /tmp/template/fs_cli.conf /etc/fs_cli.conf
 
 RUN mv /etc/switch/conf /etc/switch/conf.bak

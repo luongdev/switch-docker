@@ -1,0 +1,5 @@
+<configuration name="lua.conf" description="LUA Configuration">
+  <settings>
+    <!-- <param name="script-directory" value="/opt/switch/scripts/?.lua" /> -->
+  </settings>
+</configuration>

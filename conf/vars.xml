@@ -1,6 +1,6 @@
 <include>
-  <X-PRE-PROCESS cmd="set" data="loglevel=debug" />
-  <X-PRE-PROCESS cmd="set" data="console_loglevel=debug" />
+  <X-PRE-PROCESS cmd="set" data="loglevel=info" />
+  <X-PRE-PROCESS cmd="set" data="console_loglevel=info" />
 
   <X-PRE-PROCESS cmd="set" data="external_ip_addr=127.0.0.1" />
   <X-PRE-PROCESS cmd="set" data="external_sip_port=5080" />

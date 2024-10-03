@@ -23,7 +23,8 @@
         <param name="uuid" value="true" />
       </settings>
       <mappings>
-        <map name="all" value="debug,info,notice,warning,err,crit,alert" />
+        <!-- <map name="all" value="debug,info,notice,warning,err,crit,alert" /> -->
+        <map name="all" value="warning,err,crit,alert" />
       </mappings>
     </profile>
   </profiles>
