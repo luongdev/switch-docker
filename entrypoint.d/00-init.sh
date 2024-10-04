@@ -19,6 +19,8 @@ set_owner() {
     /var/log/switch
 }
 
+
+
 if [ ! -e $started_file ]; then
   echo "----- Initializing -----$NEWLINE"
   
@@ -27,7 +29,6 @@ if [ ! -e $started_file ]; then
   touch $started_file
 
   envsubst < /etc/switch/templates/vars.template          > /etc/switch/conf/env.xml
-  envsubst < /etc/switch/templates/dsn.template           > /etc/switch/conf/sofia/dsn.xml
 else
   echo "----- Container initialized -----$NEWLINE"
 fi
