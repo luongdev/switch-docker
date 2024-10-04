@@ -1,17 +1,7 @@
 <include>
-  <X-PRE-PROCESS cmd="set" data="loglevel=info" />
-  <X-PRE-PROCESS cmd="set" data="console_loglevel=info" />
+  <X-PRE-PROCESS cmd="set" data="ib_codecs=$${codecs}" />
+  <X-PRE-PROCESS cmd="set" data="ob_codecs=$${codecs}" />
 
-  <X-PRE-PROCESS cmd="set" data="external_ip_addr=127.0.0.1" />
-  <X-PRE-PROCESS cmd="set" data="external_sip_port=5080" />
-
-  <X-PRE-PROCESS cmd="set" data="internal_ip_addr=127.0.0.1" />
-  <X-PRE-PROCESS cmd="set" data="internal_sip_port=5090" />
-
-
-  <X-PRE-PROCESS cmd="set" data="min_rtp_port=10000" />
-  <X-PRE-PROCESS cmd="set" data="max_rtp_port=10100" />
-
-  <X-PRE-PROCESS cmd="set" data="switchname=switchname" />
-
+  <X-PRE-PROCESS cmd="set" data="ext_sip_ip=$${ext_ip}" />
+  <X-PRE-PROCESS cmd="set" data="ext_rtp_ip=$${ext_ip}" />
 </include>

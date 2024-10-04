@@ -1,0 +1,22 @@
+<include>
+  <!-- Codec -->
+  <X-PRE-PROCESS cmd="set" data="codecs=$CODECS" />
+  <X-PRE-PROCESS cmd="set" data="switchname=$SWITCHNAME" />
+
+  <!-- Log -->
+  <X-PRE-PROCESS cmd="set" data="loglevel=$LOG_LEVEL" />
+  <X-PRE-PROCESS cmd="set" data="console_loglevel=$CONSOLE_LOG_LEVEL" />
+
+  <!-- Database -->
+  <X-PRE-PROCESS cmd="set" data="dsn=$CORE_DSN" />
+  <X-PRE-PROCESS cmd="set" data="schema=$CORE_SCHEMA" />
+
+  <!-- IP Address -->
+  <X-PRE-PROCESS cmd="set" data="ext_ip=$EXTERNAL_IP" />
+  <X-PRE-PROCESS cmd="set" data="sip_port=$SIP_PORT" />
+
+  <!-- Switch -->
+  <X-PRE-PROCESS cmd="set" data="min_rtp_port=$MIN_RTP_PORT" />
+  <X-PRE-PROCESS cmd="set" data="max_rtp_port=$MAX_RTP_PORT" />
+  
+</include>

@@ -1,21 +1,17 @@
 #!/bin/bash
 
-mkdir -p \
-  /etc/switch/data \
-  /var/switch \
-  /var/log/switch \
-  /usr/local/db
+directory="/entrypoint.d"
+file_ext=".sh"
 
-useradd -u 1000 -U -d /etc/switch/data -s /bin/bash switch
-
-chown -R switch:switch \
-  /etc/switch \
-  /var/switch \
-  /usr/local \
-  /var/log/switch
+for file in "$directory"/*; do
+  if [[ "$file" == *"$file_ext" ]]; then
+    sh -c "$file"
+  fi
+done
 
 trap 'freeswitch -stop' SIGTERM
 
+chown switch:switch /dev/stdout
 gosu switch freeswitch -u switch -g switch -nc -nf -nonat -c &
 pid="$!"
 

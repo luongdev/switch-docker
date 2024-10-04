@@ -28,7 +28,9 @@
     <!-- <param name="core-db-dsn" value="mysql://Server=;Database=;Uid=;Pwd=;" /> -->
     <!-- <param name="core-db-name" value="/dev/shm/core.db" /> -->
 
-    <param name="auto-create-schemas" value="true"/>
+    <param name="core-db-dsn" value="$${dsn}" /> -->
+
+    <param name="auto-create-schemas" value="$${schema}"/>
     <param name="auto-clear-sql" value="true"/>
     <!-- <param name="enable-early-hangup" value="true"/> -->
 
