@@ -12,11 +12,12 @@ RUN mv /etc/switch/conf /etc/switch/conf.bak
 RUN mv /tmp/conf /etc/switch/conf
 
 RUN chmod +x /tmp/bin/*
+RUN mv /tmp/bin/pgready.sh      /usr/bin/pgready
 RUN mv /tmp/bin/entrypoint.sh   /docker-entrypoint.sh
 RUN mv /tmp/bin/healthcheck.sh  /healthcheck.sh
 RUN mv /tmp/bin/entrypoint.d    /entrypoint.d
 
-ENV EXTERNAL_IP "103.229.40.170"
+
 ENV CORE_DSN "pgsql://host=192.168.13.137 port=15432 dbname=switch user=postgres password=Default#Postgres@6699"
 ENV CORE_SCHEMA "true"
 ENV SIP_PORT "5080"

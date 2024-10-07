@@ -1,3 +1,0 @@
-<include>
-  <param name="odbc-dsn" value="$CORE_DSN" />
-</include>
