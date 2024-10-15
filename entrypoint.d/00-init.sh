@@ -32,8 +32,6 @@ get_dsn() {
 
 ser_vars() {
   export DSN=$(get_dsn)
-  echo "DSN: $DSN"
-
   envsubst < /etc/switch/templates/vars.template          > /etc/switch/conf/env.xml
 }
 
